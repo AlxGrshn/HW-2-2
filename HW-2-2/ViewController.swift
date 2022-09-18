@@ -17,11 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         trafficLightColorRed.layer.cornerRadius = trafficLightColorRed.frame.height / 2.0
-        trafficLightColorRed.clipsToBounds = true
         trafficLightColorYellow.layer.cornerRadius = trafficLightColorYellow.frame.height / 2.0
-        trafficLightColorYellow.clipsToBounds = true
         trafficLightColorGreen.layer.cornerRadius = trafficLightColorGreen.frame.height / 2.0
-        trafficLightColorGreen.clipsToBounds = true
         trafficLightButton.layer.cornerRadius = 10
     }
     
