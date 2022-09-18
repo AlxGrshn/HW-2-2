@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         trafficLightColorYellow.layer.cornerRadius = 65
         trafficLightColorGreen.layer.cornerRadius = 65
         trafficLightButton.layer.cornerRadius = 10
+        trafficLightColorYellow.alpha = 0.3
+        trafficLightColorGreen.alpha = 0.3
         
     }
 
