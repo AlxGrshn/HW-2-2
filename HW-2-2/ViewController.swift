@@ -19,14 +19,16 @@ class ViewController: UIViewController {
         trafficLightButton.layer.cornerRadius = 10
     }
     
-    override func viewDidLayoutSubviews() {
-        trafficLightColorRed.layer.cornerRadius = trafficLightColorRed.frame.height / 2.0
-        trafficLightColorYellow.layer.cornerRadius = trafficLightColorYellow.frame.height / 2.0
-        trafficLightColorGreen.layer.cornerRadius = trafficLightColorGreen.frame.height / 2.0
+    override func viewWillLayoutSubviews() {
+        trafficLightColorRed.layer.cornerRadius = trafficLightColorRed.frame.width / 2
+        trafficLightColorYellow.layer.cornerRadius = trafficLightColorYellow.frame.width / 2
+        trafficLightColorGreen.layer.cornerRadius = trafficLightColorGreen.frame.width / 2
     }
     
     @IBAction func trafficLightButtonDidTapped() {
-        trafficLightButton.setTitle("NEXT", for: .normal)
+        if trafficLightButton.currentTitle == "START" {
+            trafficLightButton.setTitle("NEXT", for: .normal)
+        }
         trafficLightSwitchColor()
     }
     
